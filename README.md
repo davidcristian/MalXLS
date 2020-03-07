@@ -87,3 +87,4 @@ The provided PowerShell scripts are licensed under the licenses found alongside 
 ](https://github.com/RoganDawes/P4wnP1_aloa)
 * PowerShell clear_history.ps1 script from [here](https://stackoverflow.com/a/38807689)
 * PowerShell reverse_shell.ps1 script from [here](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell) (second one)
+* [This](https://d13ot9o61jdzpp.cloudfront.net/files/Excel%204.0%20Macro%20Functions%20Reference.pdf) excellent book
