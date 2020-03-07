@@ -84,7 +84,7 @@ namespace ComputePayload
         /// <param name="useClipboard"></param>
         private static void ComputePayload(string code, bool useClipboard)
         {
-            int k = 0, current = 0, i = -1;
+            int k = 0, i = -1;
             var lastLine = false;
             // Split the code into @CharLimit chunks
             var splitCode = code.ToLookup(c => Math.Floor(k++ / (double)CharLimit)).Select(e => new string(e.ToArray()));
@@ -156,12 +156,10 @@ namespace ComputePayload
                 if (useClipboard)
                     Clipboard.SetText(Clipboard.GetText() + command + Environment.NewLine);
 
-                Console.WriteLine($"\n{++current}. {command}");
+                Console.WriteLine(command);
             }
             if (useClipboard)
                 Clipboard.SetText(Clipboard.GetText().TrimEnd('\r', '\n'));
-
-            Console.WriteLine(useClipboard ? "\nINFO: Ready to paste.\n" : string.Empty);
         }
 
         /// <summary>
