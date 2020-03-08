@@ -53,15 +53,15 @@ Example:
 
 ![](breakdown.png)
 
-1. Disable all warnings and errors so that the macro never breaks
-2. Open PowerShell in a minimized state (keystrokes still go through)
-3. Wait 1 second
-4. Hide the PowerShell window (1)
-5. Continuation of 4.
-6. Wait 1 second
-7. Open a 32bit PowerShell session if the current one is 64bit
-8. Wait 1 second
-9. Set the execution policy to bypass for the current session so that any script may run
+1.  Disable all warnings and errors so that the macro never breaks
+2.  Open PowerShell in a minimized state (keystrokes still go through)
+3.  Wait 1 second
+4.  Hide the PowerShell window
+5.  Continuation of 4.
+6.  Wait 1 second
+7.  Open a 32bit PowerShell session if the current one is 64bit
+8.  Wait 1 second
+9.  Set the execution policy to bypass for the current session so that any script may run
 10. Wait 1 second
 11. Start a reverse TCP connection to 192.168.144.134 on port 4242 (Note that this is blocked by Windows Defender)
 12. Continuation of 11.
@@ -73,13 +73,13 @@ Example:
 
 ## Known Issues
 
-- Sending large payloads requires multiple wait commands (usually every 3 instructions). The cause for this is unknown because the ``TRUE`` switch for ``SEND.KEYS`` should wait for the keystrokes to be processed before going to the next instruction, which is not always the case and results in mixed keystrokes and a broken payload.
+- Sending large commands requires multiple wait instructions (usually every 3 cells). The cause for this is unknown because the ``TRUE`` switch for ``SEND.KEYS`` should wait for the keystrokes to be processed before going to the next instruction, which is not always the case and results in mixed keystrokes and a broken payload.
 
 ## License
 
 This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details
 
-The provided PowerShell scripts are licensed under the licenses found alongside them.
+Files belonging to other authors have their license in the same directory as them.
 
 ## Acknowledgments
 
@@ -87,3 +87,4 @@ The provided PowerShell scripts are licensed under the licenses found alongside 
 ](https://github.com/RoganDawes/P4wnP1_aloa)
 * PowerShell clear_history.ps1 script from [here](https://stackoverflow.com/a/38807689)
 * PowerShell reverse_shell.ps1 script from [here](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell) (second one)
+* [This](https://d13ot9o61jdzpp.cloudfront.net/files/Excel%204.0%20Macro%20Functions%20Reference.pdf) excellent book
