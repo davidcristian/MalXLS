@@ -56,7 +56,7 @@ Example:
 1.  Disable all warnings and errors so that the macro never breaks
 2.  Open PowerShell in a minimized state (keystrokes still go through)
 3.  Wait 1 second
-4.  Hide the PowerShell window (1)
+4.  Hide the PowerShell window
 5.  Continuation of 4.
 6.  Wait 1 second
 7.  Open a 32bit PowerShell session if the current one is 64bit
