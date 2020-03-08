@@ -36,7 +36,7 @@ namespace ComputePayload
         /// <returns></returns>
         private static string FixBadChars(string text)
         {
-            for (var i = text.Length - 1; i >= 0; --i)
+            for (int i = text.Length - 1; i >= 0; --i)
             {
                 if (text[i] == '"')
                     text = text.Substring(0, i) + text[i] + "\"" + text.Substring(i + 1);
@@ -55,8 +55,8 @@ namespace ComputePayload
         /// <returns></returns>
         private static byte[] Compress(byte[] data)
         {
-            var compressedData = new MemoryStream();
-            using (var compressionStream = new GZipStream(compressedData, CompressionMode.Compress))
+            MemoryStream compressedData = new MemoryStream();
+            using (GZipStream compressionStream = new GZipStream(compressedData, CompressionMode.Compress))
             {
                 compressionStream.Write(data, 0, data.Length);
             }
@@ -85,16 +85,16 @@ namespace ComputePayload
         private static void ComputePayload(string code, bool useClipboard)
         {
             int k = 0, i = -1;
-            var lastLine = false;
+            bool lastLine = false;
             // Split the code into @CharLimit chunks
             var splitCode = code.ToLookup(c => Math.Floor(k++ / (double)CharLimit)).Select(e => new string(e.ToArray()));
             // Convert the split code into an array of strings
-            var lines = splitCode as string[] ?? splitCode.ToArray();
+            string[] lines = splitCode as string[] ?? splitCode.ToArray();
 
             if (useClipboard) Clipboard.Clear();
             while (++i < lines.Length)
             {
-                var line = lines[i];
+                string line = lines[i];
 
                 // Check if the current line is over the character
                 // limit or if there are any bad characters near the
@@ -118,8 +118,8 @@ namespace ComputePayload
                     {
                         // Count the bad characters and the amount
                         // we are currently over the character limit
-                        var count = 0;
-                        for (var j = line.Length - 1; j >= 0; --j)
+                        int count = 0;
+                        for (int j = line.Length - 1; j >= 0; --j)
                         {
                             if (line.Length - count > CharLimit || BadChars.Any(x => x == line[j]) || line[j] == '"')
                                 count++;
@@ -151,7 +151,7 @@ namespace ComputePayload
                 }
 
                 // Compute the formula
-                var command = $"=SEND.KEYS(\"{line}\"{FormulaSeparator} TRUE)";
+                string command = $"=SEND.KEYS(\"{line}\"{FormulaSeparator} TRUE)";
 
                 if (useClipboard)
                     Clipboard.SetText(Clipboard.GetText() + command + Environment.NewLine);
@@ -186,7 +186,7 @@ namespace ComputePayload
                 return;
             }
 
-            var useClipboard = args.Length > 2 && args[2].ToLower() == "-c";
+            bool useClipboard = args.Length > 2 && args[2].ToLower() == "-c";
             string code;
             switch (args[0].ToLower())
             {
