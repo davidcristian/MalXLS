@@ -10,9 +10,11 @@ Note that antivirus software may block the execution of certain PowerShell scrip
 
 ### Why use the XLS format instead of XLSM? Why use Excel 4.0 Macros instead of VBA?
 
-https://outflank.nl/blog/2018/10/06/old-school-evil-excel-4-0-macros-xlm/
+Read this blog post: https://outflank.nl/blog/2018/10/06/old-school-evil-excel-4-0-macros-xlm/
 
-Read starting from the ``Support for XLM`` section.
+The important part starts at the ``Support for XLM`` section.
+
+It is also not immediately obvious that the file contains a macro if it is saved under ``XLS`` instead of ``XLSM`` until the warning is displayed when opening the file.
 
 ## Getting Started
 
@@ -21,6 +23,7 @@ Read starting from the ``Support for XLM`` section.
 - Insert your payload into the macro sheet (preferrably in a random cell), then rename the first cell of the payload to ``Auto_Open`` to run the payload automatically when opening the file
   - For an example, see the provided ``Book1.xls`` file. It does not contain a cell named ``Auto_Open``
   - See [Usage](#usage) for instructions on generating a payload
+- (Optional) Change the text color to ``WHITE`` and make sure the cells are the same size as regular cells
 - Activate cell ``A1`` so that it is not immediately obvious where the payload is when opening the file
 - (Optional) Insert some faux data at the beginning of the sheet
 
