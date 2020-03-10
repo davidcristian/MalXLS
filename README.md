@@ -38,7 +38,7 @@ The payload generator can be downloaded from the [Releases](https://github.com/d
 Usage: computepayload [OPTION]... [FILE]... [-C]
   -e    Compress a file using GZip and encode it into a base64 string
   -f    Fix the bad characters in a file (use on one-liners)
-  -c    Copy the commands into the clipboard instead of displaying them
+  -c    Copy the generated commands into the clipboard
 ```
 Example:
 
