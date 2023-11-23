@@ -1,6 +1,6 @@
 # Foreword
 
-This is an old project from 2020 that I created on a different account. The original repository is gone, but the first person that forked it became the new owner. I decided to reupload the project on this account.
+This is an old project from 2020 that I created on a different account. The original repository is gone, but the first person that forked it became the new owner. I decided to reupload the project on this account (davidcristian)
 
 # Disclaimer
 
